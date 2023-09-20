@@ -22,6 +22,12 @@ class UserResource extends Resource
 
     protected static ?string $navigationGroup = 'GESTÃO';
 
+    protected static ?string $modelLabel = 'Usuário';
+
+    protected static ?string $pluralModelLabel = 'Usuários';
+
+    protected static ?string $slug = 'usuarios';
+
     public static function form(Form $form): Form
     {
         return $form
@@ -34,6 +40,7 @@ class UserResource extends Resource
                     ->label('E-mail')
                     ->email()
                     ->required()
+                    ->unique(ignoreRecord: true)
                     ->maxLength(191),
                 Forms\Components\TextInput::make('password')
                     ->label('Senha')
