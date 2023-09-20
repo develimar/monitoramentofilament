@@ -5,6 +5,7 @@ namespace App\Filament\Resources\TI;
 use App\Filament\Resources\TI\AcessoResource\Pages;
 use App\Filament\Resources\TI\AcessoResource\RelationManagers;
 use App\Models\TI\Acesso;
+use Filament\Actions\Action;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -15,6 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\Fieldset;
 use pxlrbt\FilamentExcel\Actions\Concerns\ExportableAction;
 use pxlrbt\FilamentExcel\Actions\Tables\ExportBulkAction;
+use Phpsa\FilamentPasswordReveal;
 
 class AcessoResource extends Resource
 {
@@ -38,7 +40,9 @@ class AcessoResource extends Resource
                         ->label('Usuário'),
                 Forms\Components\TextInput::make('password')
                         ->label('Senha'),
-                ])->columns(2)
+                Forms\Components\Textarea::make('description')
+                    ->label('Descrição'),
+                ])->columns(2),
             ]);
     }
 
@@ -67,7 +71,7 @@ class AcessoResource extends Resource
                     ->copyable()
                     ->toggleable()
                     ->searchable(),
-            ])
+            ])->defaultSort('id','DESC')
             ->filters([
                 //
             ])

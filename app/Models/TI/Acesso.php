@@ -17,5 +17,6 @@ class Acesso extends Model
         'url',
         'username',
         'password',
+        'description',
     ];
 }

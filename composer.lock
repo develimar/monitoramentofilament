@@ -4,8 +4,70 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7eec7ec0c5f1aa848a3212a5e07f4c6b",
+    "content-hash": "47d628fc8a3101773ff3977465b5cf46",
     "packages": [
+        {
+            "name": "amendozaaguiar/filament-route-statistics",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amendozaaguiar/filament-route-statistics.git",
+                "reference": "6efcb6b5cb5e4ab6fb8aada501e8860263af129f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/amendozaaguiar/filament-route-statistics/zipball/6efcb6b5cb5e4ab6fb8aada501e8860263af129f",
+                "reference": "6efcb6b5cb5e4ab6fb8aada501e8860263af129f",
+                "shasum": ""
+            },
+            "require": {
+                "bilfeldt/laravel-route-statistics": "^2.2",
+                "filament/filament": "^3.0-stable",
+                "php": "^8.1|^8.2",
+                "pxlrbt/filament-excel": "^2.1",
+                "spatie/laravel-package-tools": "^1.16"
+            },
+            "require-dev": {
+                "filament/upgrade": "^3.0-stable"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Amendozaaguiar\\FilamentRouteStatistics\\FilamentRouteStatisticsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Amendozaaguiar\\FilamentRouteStatistics\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anderson Mendoza Aguiar",
+                    "email": "amendozaaguiar@outlook.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Filament route statictics viewer",
+            "keywords": [
+                "amendozaaguiar",
+                "filament",
+                "laravel",
+                "route",
+                "statistics"
+            ],
+            "support": {
+                "issues": "https://github.com/amendozaaguiar/filament-route-statistics/issues",
+                "source": "https://github.com/amendozaaguiar/filament-route-statistics/tree/1.4.0"
+            },
+            "time": "2023-09-07T01:18:07+00:00"
+        },
         {
             "name": "anourvalar/eloquent-serialize",
             "version": "1.2.15",
@@ -67,6 +129,150 @@
                 "source": "https://github.com/AnourValar/eloquent-serialize/tree/1.2.15"
             },
             "time": "2023-07-14T07:49:10+00:00"
+        },
+        {
+            "name": "bilfeldt/laravel-request-logger",
+            "version": "v2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bilfeldt/laravel-request-logger.git",
+                "reference": "dc9941093b77f1b56f93dd1de3ce204f3508901e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bilfeldt/laravel-request-logger/zipball/dc9941093b77f1b56f93dd1de3ce204f3508901e",
+                "reference": "dc9941093b77f1b56f93dd1de3ce204f3508901e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/contracts": "^10.0",
+                "php": "~8.1.0 || ~8.2.0",
+                "spatie/laravel-package-tools": "^1.4.3"
+            },
+            "require-dev": {
+                "nunomaduro/collision": "^7.2",
+                "orchestra/testbench": "^8.0",
+                "phpunit/phpunit": "^10.0",
+                "spatie/laravel-ray": "^1.32"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Bilfeldt\\RequestLogger\\RequestLoggerServiceProvider"
+                    ],
+                    "aliases": {
+                        "RequestLogger": "Bilfeldt\\RequestLogger\\RequestLoggerFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bilfeldt\\RequestLogger\\": "src",
+                    "Bilfeldt\\RequestLogger\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anders Bilfeldt",
+                    "email": "abilfeldt@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Log Laravel application request and responses for debugging or statistics",
+            "homepage": "https://github.com/bilfeldt/laravel-request-logger",
+            "keywords": [
+                "bilfeldt",
+                "laravel",
+                "laravel-request-logger"
+            ],
+            "support": {
+                "issues": "https://github.com/bilfeldt/laravel-route-statistics/issues",
+                "source": "https://github.com/bilfeldt/laravel-route-statistics"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/bilfeldt",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-08-29T11:23:59+00:00"
+        },
+        {
+            "name": "bilfeldt/laravel-route-statistics",
+            "version": "v2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bilfeldt/laravel-route-statistics.git",
+                "reference": "dfbe8767bcf03ecb44671d5943f6e39b54a52cd2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bilfeldt/laravel-route-statistics/zipball/dfbe8767bcf03ecb44671d5943f6e39b54a52cd2",
+                "reference": "dfbe8767bcf03ecb44671d5943f6e39b54a52cd2",
+                "shasum": ""
+            },
+            "require": {
+                "bilfeldt/laravel-request-logger": "^2.0",
+                "illuminate/contracts": "^10.0",
+                "laravel/framework": "^10.0",
+                "php": "~8.1.0 || ~8.2.0"
+            },
+            "require-dev": {
+                "nunomaduro/collision": "^7.2",
+                "orchestra/testbench": "^8.0",
+                "phpunit/phpunit": "^10.0",
+                "spatie/laravel-ray": "^1.32"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Bilfeldt\\LaravelRouteStatistics\\LaravelRouteStatisticsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bilfeldt\\LaravelRouteStatistics\\": "src",
+                    "Bilfeldt\\LaravelRouteStatistics\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anders Bilfeldt",
+                    "email": "abilfeldt@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Log statistics about route usage per user/team",
+            "homepage": "https://github.com/bilfeldt/laravel-route-statistics",
+            "keywords": [
+                "bilfeldt",
+                "laravel",
+                "route",
+                "statistics"
+            ],
+            "support": {
+                "issues": "https://github.com/bilfeldt/laravel-route-statistics/issues",
+                "source": "https://github.com/bilfeldt/laravel-route-statistics"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/bilfeldt",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-07-23T22:06:46+00:00"
         },
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -4432,6 +4638,72 @@
                 }
             ],
             "time": "2023-02-25T19:38:58+00:00"
+        },
+        {
+            "name": "phpsa/filament-password-reveal",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpsa/filament-password-reveal.git",
+                "reference": "f954e1c3e0509dcbf39e9f9b057f9b18c2995742"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpsa/filament-password-reveal/zipball/f954e1c3e0509dcbf39e9f9b057f9b18c2995742",
+                "reference": "f954e1c3e0509dcbf39e9f9b057f9b18c2995742",
+                "shasum": ""
+            },
+            "require": {
+                "filament/forms": "^3.0",
+                "php": "^8.0",
+                "spatie/laravel-package-tools": "^1.10"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Phpsa\\FilamentPasswordReveal\\FilamentPasswordRevealProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Phpsa\\FilamentPasswordReveal\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Craig G Smith",
+                    "email": "vxdhost@gmail.com"
+                }
+            ],
+            "description": "Password Input with option to show",
+            "homepage": "https://cgs4k.nz",
+            "keywords": [
+                "cli",
+                "filament",
+                "fun",
+                "laravel",
+                "resource",
+                "ui",
+                "user",
+                "widget"
+            ],
+            "support": {
+                "issues": "https://github.com/phpsa/filament-password-reveal/issues",
+                "source": "https://github.com/phpsa/filament-password-reveal/tree/v2.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/phpsa",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-08-09T22:30:56+00:00"
         },
         {
             "name": "psr/cache",
