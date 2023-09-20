@@ -169,6 +169,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\Filament\AdminPanelProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        //laravel permissions
+        Spatie\Permission\PermissionServiceProvider::class,
     ])->toArray(),
 
     /*

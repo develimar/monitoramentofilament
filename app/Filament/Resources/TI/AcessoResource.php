@@ -30,10 +30,14 @@ class AcessoResource extends Resource
             ->schema([
                 Fieldset::make()
                     ->schema([
-                Forms\Components\TextInput::make('title'),
-                Forms\Components\TextInput::make('url'),
-                Forms\Components\TextInput::make('username'),
-                Forms\Components\TextInput::make('password'),
+                Forms\Components\TextInput::make('title')
+                        ->label('Titulo'),
+                Forms\Components\TextInput::make('url')
+                        ->label('URL'),
+                Forms\Components\TextInput::make('username')
+                        ->label('Usuário'),
+                Forms\Components\TextInput::make('password')
+                        ->label('Senha'),
                 ])->columns(2)
             ]);
     }
@@ -43,19 +47,23 @@ class AcessoResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
+                    ->label('Titulo')
                     ->copyable()
                     ->toggleable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('url')
+                    ->label('URL')
                     ->copyable()
                     ->toggleable()
                     ->searchable()
                     ->limit(25),
                 Tables\Columns\TextColumn::make('username')
+                    ->label('Usuário')
                     ->copyable()
                     ->toggleable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('password')
+                    ->label('Senha')
                     ->copyable()
                     ->toggleable()
                     ->searchable(),
