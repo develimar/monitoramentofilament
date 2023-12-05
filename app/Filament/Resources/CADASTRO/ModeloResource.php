@@ -21,6 +21,10 @@ class ModeloResource extends Resource
 
     protected static ?string $navigationGroup = 'CADASTRO';
 
+    protected static ?string $modelLabel = 'Modelo de Veículo';
+
+    protected static ?string $pluralModelLabel = 'Modelos de Veículos';
+
     public static function form(Form $form): Form
     {
         return $form
@@ -29,6 +33,7 @@ class ModeloResource extends Resource
                     ->relationship('marca', 'name')
                     ->required(),
                 Forms\Components\TextInput::make('name')
+                    ->label('Modelo')
                     ->required()
                     ->maxLength(191),
             ]);
@@ -38,16 +43,14 @@ class ModeloResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('name')
+                    ->label('Modelo')
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('marca.name')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
+                    ->label('Data de Criação')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),

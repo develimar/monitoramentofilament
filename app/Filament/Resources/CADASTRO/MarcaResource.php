@@ -21,11 +21,16 @@ class MarcaResource extends Resource
 
     protected static ?string $navigationGroup = 'CADASTRO';
 
+    protected static ?string $modelLabel = 'Marca de Veículo';
+
+    protected static ?string $pluralModelLabel = 'Marcas de Veículos';
+
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
+                    ->label('Nome da Marca')
                     ->required()
                     ->maxLength(191),
             ]);
@@ -36,12 +41,10 @@ class MarcaResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
+                    ->label('Nome da Marca')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
+                    ->label('Data de Criação')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
